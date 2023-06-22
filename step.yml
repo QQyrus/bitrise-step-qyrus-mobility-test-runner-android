@@ -127,7 +127,13 @@ inputs:
         a device pool will have list of devices added and a test
         run will happen on a device from the pool.
       is_required: true
-      
+  - email_id:
+    opts:
+      title: "emailId"
+      summary: Enter the EmailId
+      description: |
+        Enter Your EmailId To Send Your Test Reports.
+      is_required: true    
 outputs:
   - QYRUS_TEST_REPORT_URL: null
     opts:

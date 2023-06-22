@@ -45,6 +45,7 @@ workflows:
         - device_pool_name: $DEVICE_POOL_NAME
         - upload_app: $UPLOAD_APP
         - enable_debug: $DEBUG_MODE
+        - email: $EMAIL_ID
 
     - script:
         inputs:

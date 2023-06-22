@@ -8,7 +8,6 @@ const path = require('path')
 const url = require('url')
 const { exec } = require("child_process");
 
-
 let appPath = process.argv[2];
 let gatewayUrl = process.argv[3]
 let qyrus_username = process.argv[4];
@@ -21,10 +20,7 @@ let device_pool_name = process.argv[10];
 let upload_app = process.argv[11];
 let enable_debug = process.argv[12];
 let bundle_id = process.argv[13];
-const gatewayURLParse = new URL(gatewayUrl);
-let host_name = gatewayURLParse.hostname;
-let port = gatewayURLParse.port;
-let pathName = gatewayURLParse.pathname;
+let emailId = process.argv[14];
 
 // testing parameters
 if ( appPath == null || qyrus_username == null || qyrus_password == null || appPath == null || gatewayUrl == null ) {
@@ -111,8 +107,10 @@ function runTrigger ( ) {
         "testSuiteName": qyrus_suite_name,
         "devicePoolName": device_pool_name,
         "appFileName": appName,
+        "appPackage" : appPackage,
         "appActivity": app_activity,
-        "bundleId": bundle_id
+        "bundleId": bundle_id,
+        "emailId" : emailId
     }
     var reqPost = https.request ( apiCallConfig, function(response) {
         if (response.statusCode != 200) {
@@ -184,13 +182,14 @@ function completedTest (execStatusResponse) {
     let apiCallConfig = {
         host: host_name,
         port: port,
-        path: pathName+'/checkExecutionResult',
+        path: pathName+'/checkExecutionResult?emailId='+emailId,
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         }
     }
     var reqPost = https.request(apiCallConfig, function(response) {
+       
         if(response.statusCode!=200){
             console.log('Failed to run test, Try again.');
             return;
