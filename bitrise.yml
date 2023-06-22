@@ -6,8 +6,8 @@ app:
   # If you want to share this step into a StepLib
   - BITRISE_STEP_ID: qyrus-mobility-test-runner-android
   - BITRISE_STEP_VERSION: "0.0.3"
-  - BITRISE_STEP_GIT_CLONE_URL: https://github.com/qyrusai/qyrus-mobility-test-runner-android.git
-  - MY_STEPLIB_REPO_FORK_GIT_URL: https://github.com/QyrusAI/bitrise-steplib.git
+  - BITRISE_STEP_GIT_CLONE_URL: https://github.com/QQyrus/qyrus-mobility-test-runner-android.git
+  - MY_STEPLIB_REPO_FORK_GIT_URL: https://github.com/QQyrus/bitrise-steplib.git
   
 workflows:
   test:

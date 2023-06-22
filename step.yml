@@ -4,9 +4,9 @@ summary: Upload an app to Qyrus and run tests.
 description: |
   This step uploads a provided app apk/ipa to Qyrus. It then will execute the tests for the provided apks/ipas in Qyrus. 
   Qyrus is a end to end testing platform designed to test Web, Mobile and APIs for all digital enterprises. With its codeless approach to testing Web, Mobile & APIs, Qyrus is the fastest way to start the journey of automated testing for your enterprise.
-website: https://github.com/qyrusai/bitrise-step-qyrus-mobility-test-runner-android
-source_code_url: https://github.com/qyrusai/bitrise-step-qyrus-mobility-test-runner-android
-support_url: https://github.com/qyrusai/bitrise-step-qyrus-mobility-test-runner-android/issues
+website: https://github.com/QQyrus/bitrise-step-qyrus-mobility-test-runner-android
+source_code_url: https://github.com/QQyrus/bitrise-step-qyrus-mobility-test-runner-android
+support_url: https://github.com/QQyrus/bitrise-step-qyrus-mobility-test-runner-android/issues
 host_os_tags:
   - osx-10.10
   - ubuntu-16.04
